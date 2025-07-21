@@ -1,4 +1,6 @@
 /**
- * Utility functions for Robinhood Crypto Client
+ * Utility module exports for Robinhood Crypto Client
  * @module
  */
+
+export * from './config.ts'
