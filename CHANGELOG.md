@@ -5,7 +5,15 @@ All notable changes to the Robinhood Crypto Client will be documented in this fi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.0.1] - 2025-01-21
+## [0.1.0] - 2025-07-20
+
+### 🚀 Publish to JSR
+
+With this release, this library is now available on the JavaScript Registry (JSR) for easy installation and use in Deno projects.
+
+---
+
+## [0.0.1] - 2025-07-20
 
 ### 🎉 Initial Release
 
@@ -14,6 +22,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 #### ✨ Added
 
 **Core Features:**
+
 - Complete Ed25519 authentication system with message signing
 - Token bucket rate limiting (100 req/min, 300 burst capacity)
 - Comprehensive error handling with sanitized messages
@@ -21,11 +30,13 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 - Production-ready HTTP client with connection pooling
 
 **API Endpoints:**
+
 - **Account Management** - Details, balance, permissions, activity
 - **Market Data** - Real-time quotes, estimated prices, spreads, current prices
 - **Trading Operations** - Orders (market/limit), holdings, cancellation, portfolio summary
 
 **Client Features:**
+
 - Environment variable configuration support
 - Debug logging for development
 - Rate limiter status monitoring
@@ -33,6 +44,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 - Automatic retry logic with exponential backoff
 
 **Error Handling:**
+
 - `AuthenticationError` - Invalid credentials or signature issues
 - `RateLimitError` - API rate limit exceeded with retry guidance
 - `ValidationError` - Invalid request parameters
@@ -40,6 +52,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 - `ApiError` - API-specific errors with codes
 
 **Type System:**
+
 - Complete TypeScript interfaces for all API models
 - Discriminated unions for order types and configurations
 - Generic pagination types with cursor support
@@ -48,6 +61,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 #### 📚 Documentation
 
 **Comprehensive Documentation Suite:**
+
 - **[README.md](README.md)** - Project overview, features, quick start guide
 - **[Getting Started Guide](docs/getting-started.md)** - Complete setup walkthrough from installation to first API call
 - **[Usage Examples](docs/examples.md)** - 500+ lines of practical code examples covering all features
@@ -57,6 +71,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 - **[Documentation Index](docs/README.md)** - Navigation guide for all documentation
 
 **Documentation Features:**
+
 - Copy-paste code examples that work out of the box
 - Progressive complexity from basic to advanced usage
 - Comprehensive error handling examples
@@ -67,6 +82,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 #### 🧪 Testing
 
 **Comprehensive Test Suite:**
+
 - **185+ passing tests** with excellent coverage
 - Unit tests for all core components
 - Integration tests with mock API responses
@@ -77,6 +93,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 #### 🏗️ Architecture
 
 **Production-Ready Design:**
+
 - Composition-based architecture with specialized managers
 - Configuration-driven initialization
 - Deno-native implementation using Web Crypto API
@@ -84,6 +101,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 - Modular endpoint design for easy extension
 
 **Security Features:**
+
 - Ed25519 digital signatures for all requests
 - 30-second timestamp validity window
 - Private key protection and sanitized error messages
@@ -91,6 +109,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 - Automatic signature generation and validation
 
 **Performance Optimizations:**
+
 - Connection pooling via Deno's native fetch
 - Request batching for multiple operations
 - Intelligent caching with configurable TTL
@@ -100,6 +119,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 #### 🛠️ Developer Experience
 
 **Development Tools:**
+
 - Debug mode with detailed request/response logging
 - Rate limiter status monitoring
 - Configuration validation with helpful error messages
@@ -107,6 +127,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 - Comprehensive error messages with actionable guidance
 
 **Build System:**
+
 - Pure Deno implementation (no Node.js dependencies)
 - Native TypeScript execution without transpilation
 - Standard library usage for maximum compatibility
@@ -116,6 +137,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 ### 🔒 Security
 
 **Cryptographic Security:**
+
 - Ed25519 digital signatures using Deno's Web Crypto API
 - Secure message construction preventing replay attacks
 - Private key protection with memory-safe handling
@@ -123,6 +145,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 - Request signing prevents man-in-the-middle attacks
 
 **Operational Security:**
+
 - Environment variable credential loading
 - Sanitized error messages prevent key leakage
 - Secure configuration management
@@ -132,6 +155,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 ### 📊 Performance
 
 **Rate Limiting:**
+
 - Token bucket algorithm with configurable parameters
 - Exponential backoff with jitter for failed requests
 - Per-endpoint rate limiting capabilities
@@ -139,6 +163,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 - Automatic request queuing when limits approached
 
 **Efficiency:**
+
 - Connection reuse and pooling
 - Intelligent request batching
 - Response caching with TTL
@@ -148,6 +173,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 ### 🌐 Platform Support
 
 **Runtime Requirements:**
+
 - **Deno v2.0+** - Primary runtime environment
 - **TypeScript** - Native support without compilation
 - **Web Standards** - Uses Fetch API, Web Crypto, and other standard APIs
@@ -156,18 +182,21 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 ### 📋 API Coverage
 
 **Account Endpoints:**
+
 - Account details and status
 - Balance and buying power
 - Permissions and capabilities
 - Activity history with pagination
 
 **Market Data Endpoints:**
+
 - Best bid/ask prices for all trading pairs
 - Estimated execution prices for orders
 - Current market prices and spreads
 - Symbol validation and availability
 
 **Trading Endpoints:**
+
 - Trading pair information and requirements
 - Crypto holdings with market values
 - Order management (create, retrieve, cancel)
@@ -176,6 +205,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 ### 🔧 Configuration
 
 **Flexible Configuration:**
+
 - Environment variable support
 - Programmatic configuration
 - Rate limiting customization
@@ -183,6 +213,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 - Timeout and retry settings
 
 **Default Settings:**
+
 - Production-ready default values
 - Conservative rate limiting
 - Secure authentication settings
@@ -194,11 +225,13 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 ## Development Guidelines
 
 ### Versioning Strategy
+
 - **Major**: Breaking API changes
 - **Minor**: New features, backward compatible
 - **Patch**: Bug fixes, documentation updates
 
 ### Release Process
+
 - Comprehensive testing before release
 - Documentation updates with code changes
 - Security review for all releases
@@ -206,6 +239,7 @@ First production-ready release of the Robinhood Crypto Client with comprehensive
 - Community feedback integration
 
 ### Support Policy
+
 - **Current version**: Full support with updates
 - **Previous version**: Security updates only
 - **Deprecated versions**: No support
