@@ -21,6 +21,7 @@ import {
   signMessage,
 } from './crypto-helpers.ts'
 import { createRateLimiterWithRetry } from '../services/mod.ts'
+import type { RateLimitStatus } from '../services/rate-limiter.ts'
 
 /**
  * HTTP response with enhanced metadata
@@ -220,7 +221,7 @@ export class HttpClient {
   /**
    * Get rate limiter status
    */
-  getRateLimiterStatus() {
+  getRateLimiterStatus(): RateLimitStatus {
     return this.rateLimiter.getStatus()
   }
 

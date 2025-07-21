@@ -7,6 +7,18 @@ import type { RateLimitConfig } from '../types/mod.ts'
 import { RateLimitError } from '../errors/mod.ts'
 
 /**
+ * Rate limit status interface
+ * This provides information about the current state of the rate limiter.
+ */
+export type RateLimitStatus = {
+  tokens: number
+  maxTokens: number
+  refillRate: number
+  lastRefill: number
+  timeUntilToken: number
+}
+
+/**
  * Token bucket rate limiter
  */
 export class TokenBucketRateLimiter {
@@ -85,7 +97,7 @@ export class TokenBucketRateLimiter {
   /**
    * Get current bucket status
    */
-  getStatus() {
+  getStatus(): RateLimitStatus {
     this.refillTokens()
 
     return {
@@ -164,7 +176,7 @@ export class RateLimiterWithRetry {
   /**
    * Get current rate limiter status
    */
-  getStatus() {
+  getStatus(): RateLimitStatus {
     return this.rateLimiter.getStatus()
   }
 
