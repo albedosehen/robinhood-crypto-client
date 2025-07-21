@@ -3,17 +3,14 @@
  * Tests the complete client functionality with mocked API responses
  */
 
-import { assertEquals, assertInstanceOf, assertRejects } from '@std/assert'
-import { Stub, stub } from '@std/testing/mock'
+import { assertEquals, assertInstanceOf } from '@std/assert'
 import { CryptoClient } from '../../client/crypto.ts'
-import type { CryptoClientConfig } from '../../types/mod.ts'
 import { ApiError, AuthenticationError, NetworkError, RateLimitError, ValidationError } from '../../errors/mod.ts'
-import { createMockFetch, createMockFetchResponse, createTestConfig, mockEnvVars } from '../utils/test-helpers.ts'
+import { createMockFetchResponse, createTestConfig, mockEnvVars } from '../utils/test-helpers.ts'
 import {
   mockAccountDetails,
   mockBestBidAsk,
   mockCryptoHoldings,
-  mockEstimatedPrice,
   mockOrder,
   mockPaginatedResponse,
   mockTradingPairs,
