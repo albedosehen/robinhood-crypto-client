@@ -3,4 +3,12 @@
  * @module
  */
 
-export * from './config.ts'
+export {
+  createConfig,
+  DEFAULT_CONFIG,
+  ENV_VARS,
+  getDebugConfig,
+  loadConfigFromEnv,
+  sanitizeConfig,
+  validateConfig,
+} from './config.ts'

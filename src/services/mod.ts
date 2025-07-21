@@ -3,4 +3,10 @@
  * @module
  */
 
-export * from './rate-limiter.ts'
+export {
+  createRateLimiter,
+  createRateLimiterWithRetry,
+  RateLimiterWithRetry,
+  type RateLimitStatus,
+  TokenBucketRateLimiter,
+} from './rate-limiter.ts'
