@@ -10,6 +10,7 @@ import { ConfigurationError } from '../errors/mod.ts'
 import { AccountEndpoint } from '../endpoints/account/account-endpoint.ts'
 import { MarketDataEndpoint } from '../endpoints/market-data/market-data-endpoint.ts'
 import { TradingEndpoint } from '../endpoints/trading/trading-endpoint.ts'
+import type { RateLimitStatus } from '../services/rate-limiter.ts'
 
 /**
  * Main client for interacting with the Robinhood Crypto API
@@ -140,7 +141,7 @@ export class CryptoClient {
    *
    * @returns Rate limiting information
    */
-  getRateLimiterStatus() {
+  getRateLimiterStatus(): RateLimitStatus {
     return this.httpClient.getRateLimiterStatus()
   }
 
